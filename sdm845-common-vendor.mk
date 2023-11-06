@@ -287,6 +287,7 @@ PRODUCT_PACKAGES += \
     libcpion \
     libdisp-aba \
     libdisplayqos \
+    libdisplayskuutils \
     libdpmqmihal \
     libdrmfs \
     libdrmtime \
@@ -321,8 +322,8 @@ PRODUCT_PACKAGES += \
     libril-qcril-hook-oem \
     librilqmiservices \
     librpmb \
-    libsdedrm \
     libsdm-color \
+    libsdm-colormgr-algo \
     libsdm-diag \
     libsdm-disp-vndapis \
     libsdmextension \
@@ -512,7 +513,6 @@ PRODUCT_PACKAGES += \
     init.qti.chg_policy \
     irsc_util \
     mlipayd@1.1 \
-    mm-pp-dpps \
     mmbn-daemon \
     msm_irqbalance \
     netmgrd \
