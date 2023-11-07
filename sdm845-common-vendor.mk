@@ -7,6 +7,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/system/etc/permissions/audiosphere.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/audiosphere.xml \
+    vendor/xiaomi/sdm845-common/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    vendor/xiaomi/sdm845-common/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/init/wfdservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/wfdservice.rc \
@@ -16,6 +18,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/permissions/qcrilhook.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qcrilhook.xml \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/permissions/qti_libpermissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_libpermissions.xml \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/permissions/qti_permissions.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/qti_permissions.xml \
+    vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/seccomp_policy/wfdservice.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice.policy \
     vendor/xiaomi/sdm845-common/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/cne/wqeclient/ATT/ATT_profile1.xml \
@@ -48,6 +51,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/configstore/vpp.configstore.xml:$(TARGET_COPY_OUT_VENDOR)/etc/configstore/vpp.configstore.xml \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -67,6 +71,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/qmipriod.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qmipriod.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
@@ -78,12 +83,16 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/scve/facereco/gModel.dat:$(TARGET_COPY_OUT_VENDOR)/etc/scve/facereco/gModel.dat \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/seccomp_policy/wfdhdcphalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdhdcphalservice.policy \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/seccomp_policy/wfdvndservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wfdvndservice.policy \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/seccomp_policy/wifidisplayhalservice.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/wifidisplayhalservice.policy \
@@ -108,7 +117,9 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/2_version_add_wps_config.sql \
     vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/3_version_update_wps_config.sql \
     vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/4_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/4_version_update_ecc_table.sql \
-    vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql
+    vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/5_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/5_version_update_ecc_table.sql \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/6_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/6_version_update_ecc_table.sql \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 
 PRODUCT_PACKAGES += \
     eglSubDriverAndroid \
@@ -129,7 +140,6 @@ PRODUCT_PACKAGES += \
     libcdsp_default_listener \
     libcdsprpc \
     libdiag \
-    libdsutils \
     libfastcvdsp_stub \
     libfastcvopt \
     libfastrpc_utf_stub \
@@ -138,13 +148,8 @@ PRODUCT_PACKAGES += \
     libidl \
     libllvm-glnext \
     libllvm-qcom \
-    libmdmdetect \
     libmdsprpc \
-    libqcmaputils \
-    libqmi \
     libqmi_cci \
-    libqmi_client_helper \
-    libqmi_client_qmux \
     libqmi_common_so \
     libqmi_csi \
     libqmi_encdec \
@@ -246,12 +251,15 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl \
     libxlog \
     com.qualcomm.qti.dpm.api@1.0_vendor \
-    com.qualcomm.qti.imscmservice@1.0_vendor \
-    com.qualcomm.qti.imscmservice@2.0_vendor \
-    com.qualcomm.qti.imscmservice@2.1_vendor \
-    com.qualcomm.qti.imscmservice@2.2_vendor \
-    com.qualcomm.qti.uceservice@2.0_vendor \
-    com.qualcomm.qti.uceservice@2.1_vendor \
+    com.qualcomm.qti.imscmservice@1.0 \
+    com.qualcomm.qti.imscmservice@2.0 \
+    com.qualcomm.qti.imscmservice@2.1 \
+    com.qualcomm.qti.imscmservice@2.2 \
+    com.qualcomm.qti.uceservice@2.0 \
+    com.qualcomm.qti.uceservice@2.1 \
+    com.qualcomm.qti.uceservice@2.2 \
+    com.qualcomm.qti.uceservice@2.3 \
+    deviceInfoServiceModule \
     android.hardware.gatekeeper@1.0-impl-qti \
     vendor.qti.esepowermanager@1.0-impl \
     vendor.qti.hardware.alarm@1.0-impl \
@@ -266,6 +274,7 @@ PRODUCT_PACKAGES += \
     lib-imsrcsbaseimpl \
     lib-imsvtcore \
     lib-imsxml \
+    lib-rcsconfig \
     lib-rtpcommon \
     lib-rtpcore \
     lib-rtpsl \
@@ -292,31 +301,46 @@ PRODUCT_PACKAGES += \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
+    libdsutils \
     libhdr_tm \
     libhexagon_nn_stub \
+    libhydra_common \
     libkeymasterdeviceutils \
     libkeymasterprovision \
     libkeymasterutils \
     liblqe \
+    libmdmdetect \
+    libmdmimgload \
     libmlipay \
     libmlipay@1.1 \
+    libmodemapi \
     libnetmgr \
     libnetmgr_common \
     libnetmgr_nr_fusion \
     libnetmgr_rmnet_ext \
     libnlnetmgr \
+    libops \
     libpdmapper \
     libpdnotifier \
     libperipheral_client \
+    libqcbor \
+    libqcci_legacy \
+    libqcmaputils \
     libqcrilFramework \
+    libqcrildatactl \
     libqdi \
     libqdp \
     libqisl \
+    libqmi \
+    libqmi_client_helper \
+    libqmi_client_qmux \
+    libqmi_legacy \
     libqrtr \
     libqseed3 \
     libqsocket \
     librcc \
     libril-qc-hal-qmi \
+    libril-qc-logger \
     libril-qc-ltedirectdisc \
     libril-qc-radioconfig \
     libril-qcril-hook-oem \
@@ -356,6 +380,11 @@ PRODUCT_PACKAGES += \
     vendor.display.color@1.5 \
     vendor.display.postproc@1.0 \
     vendor.qti.data.factory@2.0 \
+    vendor.qti.data.factory@2.1 \
+    vendor.qti.data.factory@2.2 \
+    vendor.qti.data.factory@2.3 \
+    vendor.qti.data.mwqem@1.0 \
+    vendor.qti.data.slm@1.0 \
     vendor.qti.esepowermanager@1.0 \
     vendor.qti.hardware.alarm@1.0 \
     vendor.qti.hardware.data.cne.internal.api@1.0 \
@@ -366,39 +395,53 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.data.dynamicdds@1.0 \
     vendor.qti.hardware.data.iwlan@1.0 \
     vendor.qti.hardware.data.latency@1.0 \
+    vendor.qti.hardware.data.lce@1.0 \
     vendor.qti.hardware.data.qmi@1.0 \
+    vendor.qti.hardware.mwqemadapter@1.0 \
     vendor.qti.hardware.qteeconnector@1.0 \
     vendor.qti.hardware.radio.am@1.0 \
     vendor.qti.hardware.radio.atcmdfwd@1.0 \
-    vendor.qti.hardware.radio.ims@1.0_vendor \
-    vendor.qti.hardware.radio.ims@1.1_vendor \
-    vendor.qti.hardware.radio.ims@1.2_vendor \
-    vendor.qti.hardware.radio.ims@1.3_vendor \
-    vendor.qti.hardware.radio.ims@1.4_vendor \
+    vendor.qti.hardware.radio.ims@1.0 \
+    vendor.qti.hardware.radio.ims@1.1 \
+    vendor.qti.hardware.radio.ims@1.2 \
+    vendor.qti.hardware.radio.ims@1.3 \
+    vendor.qti.hardware.radio.ims@1.4 \
     vendor.qti.hardware.radio.ims@1.5 \
     vendor.qti.hardware.radio.ims@1.6 \
+    vendor.qti.hardware.radio.ims@1.7 \
+    vendor.qti.hardware.radio.internal.deviceinfo@1.0 \
     vendor.qti.hardware.radio.lpa@1.0 \
+    vendor.qti.hardware.radio.lpa@1.1 \
     vendor.qti.hardware.radio.qcrilhook@1.0 \
     vendor.qti.hardware.radio.qtiradio@1.0 \
     vendor.qti.hardware.radio.qtiradio@2.0 \
     vendor.qti.hardware.radio.qtiradio@2.1 \
     vendor.qti.hardware.radio.qtiradio@2.2 \
     vendor.qti.hardware.radio.qtiradio@2.3 \
+    vendor.qti.hardware.radio.qtiradio@2.4 \
     vendor.qti.hardware.radio.uim@1.0 \
     vendor.qti.hardware.radio.uim@1.1 \
     vendor.qti.hardware.radio.uim@1.2 \
     vendor.qti.hardware.radio.uim_remote_client@1.0 \
     vendor.qti.hardware.radio.uim_remote_client@1.1 \
+    vendor.qti.hardware.radio.uim_remote_client@1.2 \
     vendor.qti.hardware.radio.uim_remote_server@1.0 \
     vendor.qti.hardware.sensorscalibrate@1.0 \
+    vendor.qti.hardware.slmadapter@1.0 \
     vendor.qti.hardware.soter@1.0 \
     vendor.qti.hardware.tui_comm@1.0 \
-    vendor.qti.ims.callinfo@1.0_vendor \
-    vendor.qti.ims.rcsconfig@1.0_vendor \
-    vendor.qti.imsrtpservice@2.0_vendor \
-    vendor.qti.imsrtpservice@2.1-service-Impl \
-    vendor.qti.imsrtpservice@2.1_vendor \
+    vendor.qti.ims.callcapability@1.0 \
+    vendor.qti.ims.callinfo@1.0 \
+    vendor.qti.ims.factory@1.0 \
+    vendor.qti.ims.factory@1.1 \
+    vendor.qti.ims.rcsconfig@1.0 \
+    vendor.qti.ims.rcsconfig@1.1 \
+    vendor.qti.ims.rcsconfig@2.0 \
+    vendor.qti.ims.rcsconfig@2.1 \
+    vendor.qti.imsrtpservice@3.0-service-Impl \
+    vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.latency@2.0 \
+    vendor.qti.latency@2.1 \
     capi_v2_aptX_Classic \
     capi_v2_aptX_HD \
     libFastRPC_UTF_Forward_skel \
@@ -440,12 +483,6 @@ PRODUCT_PACKAGES += \
     libwfdservice \
     vendor.qti.hardware.wifidisplaysession@1.0 \
     com.qualcomm.qti.dpm.api@1.0 \
-    com.qualcomm.qti.imscmservice@1.0 \
-    com.qualcomm.qti.imscmservice@2.0 \
-    com.qualcomm.qti.imscmservice@2.1 \
-    com.qualcomm.qti.imscmservice@2.2 \
-    com.qualcomm.qti.uceservice@2.0 \
-    com.qualcomm.qti.uceservice@2.1 \
     lib-imsvideocodec \
     lib-imsvt \
     lib-imsvtextutils \
@@ -458,15 +495,9 @@ PRODUCT_PACKAGES += \
     libimscamera_jni \
     libimsmedia_jni \
     libwfdnative \
-    vendor.qti.hardware.radio.ims@1.0 \
-    vendor.qti.hardware.radio.ims@1.1 \
-    vendor.qti.hardware.radio.ims@1.2 \
-    vendor.qti.hardware.radio.ims@1.3 \
-    vendor.qti.hardware.radio.ims@1.4 \
-    vendor.qti.ims.callinfo@1.0 \
-    vendor.qti.ims.rcsconfig@1.0 \
-    vendor.qti.imsrtpservice@2.0 \
-    vendor.qti.imsrtpservice@2.1 \
+    vendor.qti.diaghal@1.0 \
+    vendor.qti.imsrtpservice@3.0 \
+    vendor.qti.imsrtpservice@3.1 \
     CneApp \
     IWlanService \
     SoterService \
@@ -475,18 +506,17 @@ PRODUCT_PACKAGES += \
     HotwordEnrollmentXGoogleWCD9340 \
     PowerOffAlarm \
     QtiTelephonyService \
-    uceShimService \
     WfdService \
-    dpmserviceapp \
     ims \
     qcrilmsgtunnel \
     WfdCommon \
     audiosphere \
+    tcmclient \
     com.android.hotwordenrollment.common.util \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
-    qti-telephony-common \
+    ATFWD-daemon \
     adpl \
     adsprpcd \
     cdsprpcd \
@@ -512,8 +542,9 @@ PRODUCT_PACKAGES += \
     imsrcsd \
     init.qti.chg_policy \
     irsc_util \
+    ks \
+    mdm_helper \
     mlipayd@1.1 \
-    mmbn-daemon \
     msm_irqbalance \
     netmgrd \
     nv_mac \
@@ -523,6 +554,7 @@ PRODUCT_PACKAGES += \
     port-bridge \
     power_off_alarm \
     ppd \
+    qmipriod \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \
