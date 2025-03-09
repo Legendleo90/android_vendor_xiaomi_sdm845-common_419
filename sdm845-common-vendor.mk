@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.1-service.wfdhdcp.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.2-service.widevine.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
-    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.2-service-qti.rc \
+    vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/cnd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/cnd.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/com.qualcomm.qti.wifidisplayhal@1.0-service.rc \
     vendor/xiaomi/sdm845-common/proprietary/vendor/etc/init/dataadpl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dataadpl.rc \
@@ -316,6 +316,7 @@ PRODUCT_PACKAGES += \
     libdsutils \
     libhdr_tm \
     libhexagon_nn_stub \
+    libhta_hexagon_runtime \
     libhydra_common \
     libkeymasterdeviceutils \
     libkeymasterprovision \
@@ -383,6 +384,7 @@ PRODUCT_PACKAGES += \
     qtimutex \
     unnhal-acc-adreno \
     unnhal-acc-common \
+    unnhal-acc-hta \
     unnhal-acc-hvx \
     vendor.display.color@1.0 \
     vendor.display.color@1.1 \
@@ -528,6 +530,8 @@ PRODUCT_PACKAGES += \
     com.qti.dpmframework \
     dpmapi \
     qcrilhook \
+    android.hardware.neuralnetworks@1.3-service-qti-hta.xml \
+    android.hardware.neuralnetworks@1.3-service-qti.xml \
     ATFWD-daemon \
     adpl \
     adsprpcd \
@@ -539,7 +543,7 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service-qti \
     android.hardware.drm@1.2-service.widevine \
     android.hardware.gatekeeper@1.0-service-qti \
-    android.hardware.neuralnetworks@1.2-service-qti \
+    android.hardware.neuralnetworks@1.3-service-qti \
     qcrild \
     vendor.display.color@1.0-service \
     vendor.qti.esepowermanager@1.0-service \
