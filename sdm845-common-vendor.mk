@@ -201,8 +201,6 @@ PRODUCT_PACKAGES += \
     audio.primary.sdm845 \
     sound_trigger.primary.sdm845 \
     libFileMux_proprietary \
-    libOmxVideoDSMode \
-    libOmxVpp \
     liba2dpoffload \
     libacdb-fts \
     libacdbrtac \
